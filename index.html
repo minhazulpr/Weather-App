@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather App</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+        <!-- Layout -->
+        <link rel="stylesheet" href="css/FlexboxLayout.css" />
+        <!-- custom CSS -->
+        <link rel="stylesheet" href="css/main.css" />
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/981b24df00.js" crossorigin="anonymous"></script>
+        <!-- Script -->
+        <script src="js/weather.js" defer></script>
+    </head>
+    <body>
+        <div class="loader-container">
+            <span class="loader"></span>
+        </div>
+        <div class="container-fluid">
+            <!-- App Container -->
+            <div class="app">
+                <div class="alert show">
+                    <div class="alert-body">
+                        Default Location Loaded
+                    </div>
+                    <div class="close-btn">&times;</div>
+                </div>
+                <!-- Row -->
+                <div class="row main-content">
+                    <!-- Left Column -->
+                    <div class="col-lg-4">
+                        <div class="left-side">
+                            <!-- Input City Name -->
+                            <form action="#">
+                                <div class="form-group">
+                                    <input type="text" class="form-control inputData" placeholder="Dhaka" />
+                                    <button class="submitBtn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                </div>
+                            </form>
+
+
+                            <!-- Today Weather Sumamry -->
+                            <div class="weather-summary">
+                                <div class="weather-img">
+                                    <img src="https://www.accuweather.com/images/weathericons/7.svg" alt="Weather Icon">
+                                </div>
+                                <div class="temperature">
+                                    <p><span class="value">31</span>&deg; <span class="unit-format">C</span></p>
+                                    <p class="weathertext">Mostly Cloud</p>
+                                </div>
+                                <hr>
+                                <div class="date-info">
+                                    <p class="date">21-July-2023</p>
+                                    <p class="time">Friday, 12.44 PM</p>
+                                    <p class="daystatus">Day</p>
+                                </div>
+                                <div class="location-info">
+                                    <p class="location">Dhaka</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Column -->
+                    <div class="col-lg-8">
+                        <div class="right-side">
+                            <div class="option">
+                                <span class="today active">Today</span>
+                                <span class="tomorrow">Tomorrow</span>
+                            </div>
+
+                            <!-- Row 1 -->
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="weather-info-box">
+                                        <p class="title">Wind</p>
+                                        <p class="value"><span class="wind">6</span> KM/h</p>
+                                        <p class="wind-direction">East</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="weather-info-box">
+                                        <p class="title">Humidity</p>
+                                        <p class="value"><span class="humidity"></span> <span class="humidity-unit">%</span></p>
+                                        <p>&nbsp;</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="weather-info-box">
+                                        <p class="title">Real Feel</p>
+                                        <p class="value "><span class="real-feel">31</span>&deg; C</span></p>
+                                        <p>&nbsp;</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Row 2 -->
+                            <div class="row mt">
+                                <div class="col-lg-4">
+                                    <div class="weather-info-box">
+                                        <p class="title">UV Index</p>
+                                        <p class="value UV">5</p>
+                                        <p class="UV-text">Moderate</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="weather-info-box">
+                                        <p class="title">Pressure</p>
+                                        <p class="value"><span class="pressure">1000</span> <span class="pressure-unit">mbbar</span></p>
+                                        <p class="pressureTend">Rising</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="weather-info-box">
+                                        <p class="title">Change of rain</p>
+                                        <p class="value"><span class="changeOfRain">69</span>%</p>
+                                        <p class="changeOfRainSituation">Day</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Row 3 -->
+                            <div class="row mt">
+                                <div class="col-lg-4">
+                                    <div class="weather-info-box">
+                                        <p class="title">Temperature History</p>
+                                        <p class="value" style="font-size: 24px;"><i class="fa-solid fa-up-long" style="color:#fcacac"></i> <span class="HiTem">31</span>&deg; C</span></p>
+                                        <p class="value" style="font-size: 24px;"><i class="fa-solid fa-down-long" style="color:#b0ffd5"></i> <span class="LowTem">31</span>&deg; C</span></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="weather-info-box">
+                                        <p class="title">Sun</p>
+                                        <p class="value" style="font-size: 24px;">
+                                            <span style="font-size: 16px;">Rise</span> <span class="sunRise">5.17 am</span>
+                                        </p>
+                                        <p class="value" style="font-size: 24px;">
+                                            <span style="font-size: 16px;">Set</span> <span class="sunSet">7.00 pm</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="weather-info-box">
+                                        <p class="title">Moon</p>
+                                        <p class="value" style="font-size: 24px;">
+                                            <span style="font-size: 16px;">Rise</span> <span class="moonRise">5.17 am</span>
+                                        </p>
+                                        <p class="value" style="font-size: 24px;">
+                                            <span style="font-size: 16px;">Set</span> <span class="moonSet">7.00 pm</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <footer class="footer">
+                                <p>All Data Provided By- <a href="https://www.accuweather.com/" target="_blank">AccuWeather</a></p>
+                                <p>Design & Developed By- <a href="https://www.linkedin.com/in/minhazulpr/" target="_blank">Md. Minhazul Islam</a></p>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
